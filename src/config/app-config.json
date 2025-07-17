@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "VelocType",
+    "name": "DigiteMais",
     "version": "1.0.0",
     "description": "Aplicativo de treino de digitação"
   },
@@ -35,7 +35,7 @@
     "maxTextLength": 500
   },
   "api": {
-    "baseUrl": "https://api.veloctype.com",
+    "baseUrl": "https://api.digitemais.click",
     "endpoints": {
       "texts": "/texts",
       "categories": "/categories",
