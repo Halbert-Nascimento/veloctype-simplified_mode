@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   nginx:
     image: nginx:alpine
@@ -24,7 +22,7 @@ services:
 
   digitemais:
     build:
-      context: ../digitemais-v4-simplified_mode
+      context: .
       dockerfile: dockerfile
     container_name: digitemais-app
     restart: unless-stopped
