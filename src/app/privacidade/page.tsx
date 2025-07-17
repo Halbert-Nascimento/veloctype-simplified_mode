@@ -17,7 +17,7 @@ export default function Privacidade() {
       icon: EyeSlashIcon,
       title: "1. Informações que Coletamos",
       content: [
-        "O VelocType prioriza sua privacidade e coleta apenas as informações mínimas necessárias para fornecer nossos serviços.",
+        "O DigiteMais prioriza sua privacidade e coleta apenas as informações mínimas necessárias para fornecer nossos serviços.",
         "Dados de Uso: Coletamos informações sobre como você usa nossa plataforma, incluindo tempo de sessão, exercícios realizados e preferências de configuração.",
         "Dados de Performance: Velocidade de digitação, precisão, estatísticas de progresso e histórico de testes são armazenados localmente em seu dispositivo.",
         "Dados Técnicos: Informações básicas sobre seu navegador, sistema operacional e resolução de tela para otimizar a experiência do usuário.",
@@ -93,7 +93,7 @@ export default function Privacidade() {
   return (
     <PageContainer 
       title="Política de Privacidade" 
-      subtitle="Como protegemos e utilizamos suas informações no VelocType"
+      subtitle="Como protegemos e utilizamos suas informações no DigiteMais"
     >
       <div className="space-y-8">
         {/* Última atualização */}
@@ -119,7 +119,7 @@ export default function Privacidade() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <p className="text-lg text-cyan-700 dark:text-cyan-100 leading-relaxed">
-            No VelocType, levamos sua privacidade a sério. Esta Política de Privacidade explica como coletamos, 
+            No DigiteMais, levamos sua privacidade a sério. Esta Política de Privacidade explica como coletamos, 
             usamos, protegemos e compartilhamos suas informações quando você utiliza nossa plataforma de 
             treinamento de digitação. Nosso compromisso é com a transparência e o controle sobre seus dados.
           </p>

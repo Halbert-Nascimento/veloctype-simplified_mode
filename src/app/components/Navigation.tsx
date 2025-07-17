@@ -29,7 +29,7 @@ export default function Navigation() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-[#1e293b] dark:text-white hover:text-cyan-700 dark:hover:text-cyan-300 transition-colors">
             <ComputerDesktopIcon className="w-7 h-7" />
-            VelocType
+            DigiteMais
           </Link>
         </div>
         {/* Menu central */}

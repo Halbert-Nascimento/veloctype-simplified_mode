@@ -8,7 +8,7 @@ import ThemeProvider from './components/ThemeProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'VelocType - Aprenda a digitar mais rápido',
+  title: 'DigiteMais - Aprenda a digitar mais rápido',
   description: 'Melhore sua velocidade e precisão na digitação com exercícios práticos e feedback em tempo real.',
 }
 
