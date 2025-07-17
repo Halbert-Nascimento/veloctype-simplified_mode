@@ -18,6 +18,6 @@
   }
   
   .animate-spin-slow {
-    animation: spin 0.2s linear;
+    animation: spin 0.4s linear;
   }
 } 
