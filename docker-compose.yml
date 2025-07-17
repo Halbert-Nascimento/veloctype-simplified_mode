@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  digitemais:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: digitemais-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    ports:
+      - "3000:3000"
+    networks:
+      - digitemais-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+    # Limites de recursos para produção
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'
+        reservations:
+          memory: 256M
+          cpus: '0.25'
+
+networks:
+  digitemais-network:
+    driver: bridge
+
+# Volumes para persistência (se necessário no futuro)
+volumes:
+  digitemais-data:
