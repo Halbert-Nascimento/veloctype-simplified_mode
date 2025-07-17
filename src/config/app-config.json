@@ -1,0 +1,53 @@
+{
+  "app": {
+    "name": "VelocType",
+    "version": "1.0.0",
+    "description": "Aplicativo de treino de digitação"
+  },
+  "features": {
+    "premium": {
+      "enabled": true,
+      "categories": ["programacao", "numeros", "misto", "simbolos"],
+      "features": ["customTexts", "detailedStats", "exportData"]
+    },
+    "sound": {
+      "enabled": true,
+      "errorSoundUrl": "https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae0b2.mp3"
+    },
+    "themes": {
+      "default": "light",
+      "available": ["light", "dark", "blue", "green"]
+    }
+  },
+  "defaults": {
+    "testDuration": 60,
+    "fontSize": 1.0,
+    "showErrors": true,
+    "colorFeedback": true,
+    "soundFeedback": false,
+    "autoFocus": true
+  },
+  "limits": {
+    "maxLocalResults": 50,
+    "maxDisplayResults": 4,
+    "minFontSize": 0.8,
+    "maxFontSize": 2.0,
+    "maxTextLength": 500
+  },
+  "api": {
+    "baseUrl": "https://api.veloctype.com",
+    "endpoints": {
+      "texts": "/texts",
+      "categories": "/categories",
+      "results": "/results",
+      "user": "/user"
+    }
+  },
+  "database": {
+    "migration": {
+      "enabled": true,
+      "backupLocal": true,
+      "syncOnLoad": false
+    }
+  }
+}
