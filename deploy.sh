@@ -33,9 +33,22 @@ if ! docker info > /dev/null 2>&1; then
     exit 1
 fi
 
+# Detectar comando do Docker Compose
+COMPOSE_CMD=""
+if command -v docker-compose &> /dev/null; then
+    COMPOSE_CMD="docker-compose"
+elif docker compose version &> /dev/null; then
+    COMPOSE_CMD="docker compose"
+else
+    error "Docker Compose não encontrado. Instale docker-compose ou use Docker Desktop."
+    exit 1
+fi
+
+log "Usando comando: $COMPOSE_CMD"
+
 # Parar containers existentes
 log "Parando containers existentes..."
-docker-compose -f docker-compose.nginx.yml down || true
+$COMPOSE_CMD -f docker-compose.nginx.yml down || true
 
 # Limpar imagens antigas (opcional)
 read -p "Deseja remover imagens antigas? (y/N): " -n 1 -r
@@ -48,11 +61,11 @@ fi
 
 # Build da nova imagem
 log "Fazendo build da aplicação..."
-docker-compose -f docker-compose.nginx.yml build --no-cache
+$COMPOSE_CMD -f docker-compose.nginx.yml build --no-cache
 
 # Subir os containers
 log "Iniciando containers..."
-docker-compose -f docker-compose.nginx.yml up -d
+$COMPOSE_CMD -f docker-compose.nginx.yml up -d
 
 # Aguardar containers ficarem saudáveis
 log "Aguardando containers ficarem prontos..."
@@ -60,7 +73,7 @@ sleep 10
 
 # Verificar status
 log "Verificando status dos containers..."
-docker-compose -f docker-compose.nginx.yml ps
+$COMPOSE_CMD -f docker-compose.nginx.yml ps
 
 # Health check
 log "Fazendo health check..."
@@ -72,7 +85,7 @@ if curl -f http://localhost/api/health > /dev/null 2>&1; then
     log "📊 Health check: http://localhost/api/health"
 else
     error "❌ Health check falhou. Verificando logs..."
-    docker-compose -f docker-compose.nginx.yml logs --tail=50
+    $COMPOSE_CMD -f docker-compose.nginx.yml logs --tail=50
     exit 1
 fi
 
@@ -80,5 +93,5 @@ fi
 read -p "Deseja ver os logs em tempo real? (y/N): " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    docker-compose -f docker-compose.nginx.yml logs -f
+    $COMPOSE_CMD -f docker-compose.nginx.yml logs -f
 fi
