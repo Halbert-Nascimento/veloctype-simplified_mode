@@ -34,15 +34,6 @@
     "maxFontSize": 2.0,
     "maxTextLength": 500
   },
-  "api": {
-    "baseUrl": "https://api.digitemais.click",
-    "endpoints": {
-      "texts": "/texts",
-      "categories": "/categories",
-      "results": "/results",
-      "user": "/user"
-    }
-  },
   "database": {
     "migration": {
       "enabled": true,
