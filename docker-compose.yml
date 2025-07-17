@@ -33,7 +33,3 @@ services:
 networks:
   digitemais-network:
     driver: bridge
-
-# Volumes para persistência (se necessário no futuro)
-volumes:
-  digitemais-data:
