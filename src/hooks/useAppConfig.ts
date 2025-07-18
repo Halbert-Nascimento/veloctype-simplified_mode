@@ -95,7 +95,7 @@ interface UseAppConfigReturn {
   get: <T>(path: string, defaultValue?: T) => T  // Busca configuração por path
   
   // FUNÇÕES DE ATUALIZAÇÃO:
-  set: (path: string, value: any) => void        // Atualiza configuração
+  set: (path: string, value: unknown) => void   // Atualiza configuração
   reset: () => void                              // Reseta para padrão
   
   // FUNÇÕES DE VALIDAÇÃO:
@@ -154,12 +154,12 @@ export const useAppConfig = (): UseAppConfigReturn => {
     try {
       // Divide o path em partes: "defaults.fontSize" -> ["defaults", "fontSize"]
       const keys = path.split('.')
-      let result: any = config
+      let result: unknown = config
       
       // Navega pelo objeto seguindo o path
       for (const key of keys) {
         if (result && typeof result === 'object' && key in result) {
-          result = result[key]
+          result = (result as Record<string, unknown>)[key]
         } else {
           // Se não encontrou, retorna o valor padrão
           return defaultValue as T
@@ -194,20 +194,20 @@ export const useAppConfig = (): UseAppConfigReturn => {
    * - path: Caminho para a configuração
    * - value: Novo valor a ser definido
    */
-  const set = useCallback((path: string, value: any): void => {
+  const set = useCallback((path: string, value: unknown): void => {
     try {
       // VALIDAÇÕES ESPECÍFICAS baseadas no path
       if (path === 'defaults.fontSize') {
         const min = get('limits.minFontSize', 0.8)
         const max = get('limits.maxFontSize', 2.0)
-        if (value < min || value > max) {
+        if (typeof value === 'number' && (value < min || value > max)) {
           console.warn(`Tamanho de fonte deve estar entre ${min} e ${max}`)
           return
         }
       }
       
       if (path === 'defaults.testDuration') {
-        if (value <= 0 || !Number.isInteger(value)) {
+        if (typeof value === 'number' && (value <= 0 || !Number.isInteger(value))) {
           console.warn('Duração do teste deve ser um número inteiro positivo')
           return
         }
@@ -215,7 +215,7 @@ export const useAppConfig = (): UseAppConfigReturn => {
       
       if (path === 'themes.default') {
         const availableThemes = get('themes.available', [] as string[])
-        if (!availableThemes.includes(value)) {
+        if (typeof value === 'string' && !availableThemes.includes(value)) {
           console.warn(`Tema "${value}" não está disponível. Temas: ${availableThemes.join(', ')}`)
           return
         }
@@ -225,14 +225,14 @@ export const useAppConfig = (): UseAppConfigReturn => {
       setConfig(prevConfig => {
         const newConfig = { ...prevConfig }
         const keys = path.split('.')
-        let current: any = newConfig
+        let current: Record<string, unknown> = newConfig
         
         // Navega até o penúltimo nível
         for (let i = 0; i < keys.length - 1; i++) {
           if (!(keys[i] in current)) {
             current[keys[i]] = {}
           }
-          current = current[keys[i]]
+          current = current[keys[i]] as Record<string, unknown>
         }
         
         // Define o valor no último nível
@@ -245,7 +245,7 @@ export const useAppConfig = (): UseAppConfigReturn => {
     } catch (error) {
       console.error(`Erro ao atualizar configuração: ${path}`, error)
     }
-  }, [config, get])
+  }, [get])
 
   /**
    * FUNÇÃO: reset
@@ -415,11 +415,11 @@ export const useAppConfig = (): UseAppConfigReturn => {
 export const getStaticConfig = <T>(path: string, defaultValue?: T): T => {
   try {
     const keys = path.split('.')
-    let result: any = appConfigData
+    let result: unknown = appConfigData
     
     for (const key of keys) {
       if (result && typeof result === 'object' && key in result) {
-        result = result[key]
+        result = (result as Record<string, unknown>)[key]
       } else {
         return defaultValue as T
       }
