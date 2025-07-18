@@ -40,7 +40,7 @@ export default function Contato() {
       id: 'sugestao',
       icon: LightBulbIcon,
       title: 'Sugestão',
-      description: 'Ideias para melhorar o VelocType'
+      description: 'Ideias para melhorar o DigiteMais'
     },
     {
       id: 'feedback',
@@ -57,7 +57,7 @@ export default function Contato() {
     },
     {
       question: "Os recursos premium são pagos?",
-      answer: "Atualmente, o VelocType é totalmente gratuito. Recursos marcados como premium estão em desenvolvimento e serão disponibilizados em futuras atualizações."
+      answer: "Atualmente, o DigiteMais é totalmente gratuito. Recursos marcados como premium estão em desenvolvimento e serão disponibilizados em futuras atualizações."
     },
     {
       question: "Meus dados são sincronizados entre dispositivos?",
@@ -68,7 +68,7 @@ export default function Contato() {
       answer: "Você pode escolher entre diferentes categorias de texto, ajustar a duração dos testes e personalizar configurações como tamanho da fonte e feedback visual."
     },
     {
-      question: "O VelocType funciona offline?",
+      question: "O DigiteMais funciona offline?",
       answer: "Sim! A maioria das funcionalidades funciona offline, pois os dados são armazenados localmente em seu navegador."
     }
   ]
@@ -289,7 +289,7 @@ export default function Contato() {
             Seu Feedback é Importante!
           </h3>
           <p className="text-cyan-700 dark:text-cyan-100 mb-4">
-            O VelocType está em constante evolução e seu feedback nos ajuda a criar uma experiência 
+            O DigiteMais está em constante evolução e seu feedback nos ajuda a criar uma experiência 
             cada vez melhor. Não hesite em compartilhar suas ideias, reportar problemas ou simplesmente 
             dizer olá!
           </p>

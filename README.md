@@ -1,4 +1,4 @@
-# 🚀 VelocType - Plataforma de Treinamento de Digitação
+# 🚀 DigiteMais - Plataforma de Treinamento de Digitação
 
 <div align="center">
   <img src="https://img.shields.io/badge/Next.js-15.4.1-black?style=for-the-badge&logo=next.js" alt="Next.js">
@@ -16,7 +16,7 @@
 
 ## 📖 Sobre o Projeto
 
-**VelocType** é uma aplicação web desenvolvida para ajudar usuários a melhorar sua velocidade e precisão na digitação. Com uma interface moderna e responsiva, oferece exercícios práticos, estatísticas detalhadas e acompanhamento de progresso.
+**DigiteMais** é uma aplicação web desenvolvida para ajudar usuários a melhorar sua velocidade e precisão na digitação. Com uma interface moderna e responsiva, oferece exercícios práticos, estatísticas detalhadas e acompanhamento de progresso.
 
 ### ✨ Principais Funcionalidades
 
@@ -47,8 +47,8 @@
 
 1. **Clone o repositório**
 ```bash
-git clone https://github.com/Halbert-Nascimento/veloctype-simplified_mode.git
-cd veloctype-v4-simplified_mode
+git clone https://github.com/Halbert-Nascimento/digitemais-simplified_mode.git
+cd digitemais-v4-simplified_mode
 ```
 
 2. **Instale as dependências**
@@ -80,7 +80,7 @@ bun dev
 ## 📁 Estrutura do Projeto
 
 ```
-veloctype-v4-simplified_mode/
+digitemais-v4-simplified_mode/
 ├── src/
 │   ├── app/
 │   │   ├── components/          # Componentes reutilizáveis
@@ -155,7 +155,7 @@ O projeto usa a fonte [Inter](https://fonts.google.com/specimen/Inter) carregada
 
 ### Vercel (Recomendado)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/seu-usuario/veloctype-v4-simplified_mode)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/seu-usuario/digitemais-v4-simplified_mode)
 
 ### Outras Plataformas
 

@@ -9,7 +9,7 @@ export default function Termos() {
     {
       title: "1. Aceitação dos Termos",
       content: [
-        "Ao acessar e utilizar o VelocType, você concorda em cumprir e estar vinculado a estes Termos de Uso.",
+        "Ao acessar e utilizar o DigiteMais, você concorda em cumprir e estar vinculado a estes Termos de Uso.",
         "Se você não concorda com qualquer parte destes termos, não deve utilizar nosso serviço.",
         "Reservamo-nos o direito de modificar estes termos a qualquer momento, sendo sua responsabilidade verificar periodicamente as atualizações."
       ]
@@ -17,7 +17,7 @@ export default function Termos() {
     {
       title: "2. Descrição do Serviço",
       content: [
-        "O VelocType é uma plataforma web gratuita para treinamento de digitação que oferece exercícios interativos e acompanhamento de progresso.",
+        "O DigiteMais é uma plataforma web gratuita para treinamento de digitação que oferece exercícios interativos e acompanhamento de progresso.",
         "Nosso serviço inclui diferentes categorias de texto, estatísticas de desempenho e recursos de personalização.",
         "Nos esforçamos para manter o serviço disponível 24/7, mas não garantimos disponibilidade ininterrupta."
       ]
@@ -25,7 +25,7 @@ export default function Termos() {
     {
       title: "3. Uso Aceitável",
       content: [
-        "Você concorda em usar o VelocType apenas para fins legais e de acordo com estes Termos de Uso.",
+        "Você concorda em usar o DigiteMais apenas para fins legais e de acordo com estes Termos de Uso.",
         "É proibido usar o serviço para qualquer atividade ilegal, prejudicial ou que viole os direitos de terceiros.",
         "Não é permitido tentar interferir na operação do serviço ou acessar áreas restritas do sistema.",
         "O uso de bots, scripts automatizados ou outras ferramentas para manipular resultados é estritamente proibido."
@@ -34,7 +34,7 @@ export default function Termos() {
     {
       title: "4. Conteúdo e Propriedade Intelectual",
       content: [
-        "Todo o conteúdo presente no VelocType, incluindo textos, design, código e logotipos, está protegido por direitos autorais.",
+        "Todo o conteúdo presente no DigiteMais, incluindo textos, design, código e logotipos, está protegido por direitos autorais.",
         "Os textos utilizados nos exercícios podem ser de domínio público ou utilizados sob licenças apropriadas.",
         "Você pode usar o serviço para fins pessoais e educacionais, mas não pode reproduzir ou distribuir nosso conteúdo sem autorização.",
         "Respeitamos os direitos de propriedade intelectual de terceiros e esperamos que nossos usuários façam o mesmo."
@@ -52,7 +52,7 @@ export default function Termos() {
     {
       title: "6. Limitação de Responsabilidade",
       content: [
-        "O VelocType é fornecido 'como está', sem garantias expressas ou implícitas de qualquer tipo.",
+        "O DigiteMais é fornecido 'como está', sem garantias expressas ou implícitas de qualquer tipo.",
         "Não nos responsabilizamos por quaisquer danos diretos, indiretos, incidentais ou consequenciais decorrentes do uso do serviço.",
         "Nossa responsabilidade total, se houver, será limitada ao valor pago pelo serviço nos últimos 12 meses.",
         "Você utiliza o serviço por sua própria conta e risco."
@@ -61,7 +61,7 @@ export default function Termos() {
     {
       title: "7. Recursos Premium",
       content: [
-        "Alguns recursos do VelocType podem estar disponíveis apenas para usuários premium.",
+        "Alguns recursos do DigiteMais podem estar disponíveis apenas para usuários premium.",
         "Os termos de assinatura premium, incluindo preços e políticas de reembolso, serão claramente especificados no momento da compra.",
         "Assinaturas premium são renovadas automaticamente, a menos que canceladas pelo usuário.",
         "Não oferecemos reembolsos para períodos de assinatura já utilizados, exceto quando exigido por lei."
@@ -79,7 +79,7 @@ export default function Termos() {
     {
       title: "9. Modificações do Serviço",
       content: [
-        "Podemos modificar, atualizar ou descontinuar qualquer aspecto do VelocType a qualquer momento.",
+        "Podemos modificar, atualizar ou descontinuar qualquer aspecto do DigiteMais a qualquer momento.",
         "Notificaremos sobre mudanças significativas através do próprio serviço ou por outros meios apropriados.",
         "Continuamos comprometidos em melhorar a experiência do usuário através de atualizações regulares.",
         "Algumas modificações podem afetar recursos existentes ou introduzir novos recursos premium."
@@ -91,7 +91,7 @@ export default function Termos() {
         "Estes Termos de Uso são regidos pelas leis da República Federativa do Brasil.",
         "Qualquer disputa relacionada a estes termos será resolvida nos tribunais competentes do Brasil.",
         "Se qualquer cláusula destes termos for considerada inválida, as demais cláusulas permanecerão em pleno vigor.",
-        "Estes termos constituem o acordo completo entre você e o VelocType."
+        "Estes termos constituem o acordo completo entre você e o DigiteMais."
       ]
     }
   ]
@@ -99,7 +99,7 @@ export default function Termos() {
   return (
     <PageContainer 
       title="Termos de Uso" 
-      subtitle="Condições de uso da plataforma VelocType"
+      subtitle="Condições de uso da plataforma DigiteMais"
     >
       <div className="space-y-8">
         {/* Última atualização */}
@@ -130,7 +130,7 @@ export default function Termos() {
             <h2 className="text-2xl font-bold text-cyan-700 dark:text-cyan-300 m-0">Introdução</h2>
           </div>
           <p className="text-cyan-700 dark:text-cyan-100 leading-relaxed">
-            Bem-vindo ao VelocType! Estes Termos de Uso estabelecem as regras e condições para o uso de nossa 
+            Bem-vindo ao DigiteMais! Estes Termos de Uso estabelecem as regras e condições para o uso de nossa 
             plataforma de treinamento de digitação. Ao utilizar nossos serviços, você concorda em estar 
             vinculado a estes termos. Por favor, leia-os cuidadosamente.
           </p>

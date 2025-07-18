@@ -2,7 +2,7 @@
 
 ## 🎯 Visão Geral
 
-O `useTypingTexts` é o hook principal para gerenciar todos os textos de digitação no VelocType. Ele funciona como uma "biblioteca" que organiza e fornece acesso fácil aos textos de exercícios.
+O `useTypingTexts` é o hook principal para gerenciar todos os textos de digitação no DigiteMais. Ele funciona como uma "biblioteca" que organiza e fornece acesso fácil aos textos de exercícios.
 
 ## 🏗️ Arquitetura Simples
 

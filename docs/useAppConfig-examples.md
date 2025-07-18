@@ -25,10 +25,10 @@ function ConfigDisplay() {
   const { get } = useAppConfig()
   
   // Buscar configurações específicas
-  const appName = get('app.name')                    // "VelocType"
+  const appName = get('app.name')                    // "DigiteMais"
   const testDuration = get('defaults.testDuration')  // 60
   const fontSize = get('defaults.fontSize')          // 1.0
-  const apiUrl = get('api.baseUrl')                  // "https://api.veloctype.com"
+  const apiUrl = get('api.baseUrl')                  // "https://api.digitemais.click"
   
   return (
     <div>
@@ -279,7 +279,7 @@ function ApiClient() {
   
   const fetchTexts = async () => {
     try {
-      const url = getApiUrl('texts')  // https://api.veloctype.com/texts
+      const url = getApiUrl('texts')  // https://api.digitemais.click/texts
       const response = await fetch(url)
       return await response.json()
     } catch (error) {
@@ -289,7 +289,7 @@ function ApiClient() {
   
   const saveResult = async (result: TypingResult) => {
     try {
-      const url = getApiUrl('results')  // https://api.veloctype.com/results
+      const url = getApiUrl('results')  // https://api.digitemais.click/results
       const response = await fetch(url, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -303,7 +303,7 @@ function ApiClient() {
   
   const getUserData = async (userId: string) => {
     try {
-      const url = `${getApiUrl('user')}/${userId}`  // https://api.veloctype.com/user/123
+      const url = `${getApiUrl('user')}/${userId}`  // https://api.digitemais.click/user/123
       const response = await fetch(url)
       return await response.json()
     } catch (error) {

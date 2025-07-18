@@ -47,7 +47,7 @@ export default function Sobre() {
 
   return (
     <PageContainer 
-      title="Sobre o VelocType" 
+      title="Sobre o DigiteMais" 
       subtitle="Conheça nossa plataforma de treino de digitação moderna e eficiente"
     >
       <div className="space-y-12">
@@ -62,7 +62,7 @@ export default function Sobre() {
             <h2 className="text-2xl font-bold text-cyan-700 dark:text-cyan-300">Nossa Missão</h2>
           </div>
           <p className="text-lg text-cyan-700 dark:text-cyan-100 leading-relaxed">
-            O VelocType foi criado com o objetivo de tornar o aprendizado de digitação mais eficiente, 
+            O DigiteMais foi criado com o objetivo de tornar o aprendizado de digitação mais eficiente, 
             divertido e acessível. Acreditamos que uma boa velocidade de digitação é uma habilidade 
             fundamental no mundo digital atual, seja para estudantes, profissionais ou entusiastas da tecnologia.
           </p>

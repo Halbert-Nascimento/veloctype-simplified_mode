@@ -45,11 +45,11 @@ export default function Home() {
 
       {/* Sobre Section */}
       <section id="sobre" className="w-full max-w-5xl mx-auto bg-[#e0e7ef] rounded-2xl p-8 mt-8 mb-8 border border-[#cbd5e1] shadow-lg dark:bg-[#162032] dark:border-[#1e293b]">
-        <h2 className="text-3xl font-bold text-center mb-2">Sobre o VelocType</h2>
+        <h2 className="text-3xl font-bold text-center mb-2">Sobre o DigiteMais</h2>
         <p className="text-cyan-700 dark:text-cyan-100 text-center mb-8">Uma plataforma moderna e eficiente para melhorar sua velocidade e precisão de digitação</p>
         <div className="flex flex-col md:flex-row gap-8 items-center justify-between">
           <div className="flex-1">
-            <h3 className="text-xl font-semibold mb-4">Por que escolher o VelocType?</h3>
+            <h3 className="text-xl font-semibold mb-4">Por que escolher o DigiteMais?</h3>
             <ul className="space-y-2 text-cyan-700 dark:text-cyan-100">
               <li><span className="text-cyan-400 font-bold mr-2">✔</span>Interface intuitiva e moderna</li>
               <li><span className="text-cyan-400 font-bold mr-2">✔</span>Algoritmos avançados de análise de desempenho</li>
@@ -61,7 +61,7 @@ export default function Home() {
           <div className="flex-1 flex justify-center">
             <div className="bg-white border-2 border-cyan-500 rounded-xl p-6 shadow-lg w-80 relative dark:bg-[#0d1724] dark:border-cyan-500">
               <div className="flex items-center justify-between mb-2">
-                <span className="font-bold text-lg text-[#1e293b] dark:text-white">VelocType</span>
+                <span className="font-bold text-lg text-[#1e293b] dark:text-white">DigiteMais</span>
                 <span className="bg-cyan-700 text-xs px-2 py-1 rounded text-white font-semibold">Versão 1.0</span>
               </div>
               <div className="mb-2">
@@ -89,7 +89,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="w-full bg-[#e0e7ef] text-cyan-700 text-sm py-8 mt-auto border-t border-[#cbd5e1] dark:bg-[#162032] dark:text-cyan-100 dark:border-[#1e293b]">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center px-4 gap-4">
-          <span>© 2025 VelocType. Todos os direitos reservados.</span>
+          <span>© 2025 DigiteMais. Todos os direitos reservados.</span>
           <div className="flex gap-6 mt-2 md:mt-0">
             <Link href="/termos" className="hover:underline">Termos</Link>
             <Link href="/privacidade" className="hover:underline">Privacidade</Link>
