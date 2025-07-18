@@ -16,7 +16,7 @@
  * - Para obter estatísticas sobre os textos disponíveis
  */
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import typingTextsData from '../data/typing-texts.json'
 
 /**
