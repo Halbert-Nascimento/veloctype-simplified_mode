@@ -4,7 +4,7 @@
 
 O `PageContainer` é o **componente de layout base** para todas as páginas da aplicação. Ele fornece estrutura consistente, animações de entrada, responsividade e integração automática com o rodapé.
 
-**🎯 Função Principal**: Layout padronizado e animado para todas as páginas do VelocType
+**🎯 Função Principal**: Layout padronizado e animado para todas as páginas do DigiteMais
 
 ---
 
@@ -259,13 +259,13 @@ function TreinoPage() {
 function SobrePage() {
   return (
     <PageContainer 
-      title="Sobre o VelocType"
+      title="Sobre o DigiteMais"
       subtitle="Conheça nossa missão e história"
     >
       <div className="prose dark:prose-invert max-w-none">
         <h2>Nossa Missão</h2>
         <p>
-          O VelocType foi criado para ajudar pessoas a melhorar suas 
+          O DigiteMais foi criado para ajudar pessoas a melhorar suas 
           habilidades de digitação de forma divertida e eficiente.
         </p>
         
@@ -359,7 +359,7 @@ function ContatoPage() {
           <div className="space-y-3">
             <div className="flex items-center gap-3">
               <span>📧</span>
-              <span>contato@veloctype.com</span>
+              <span>contato@digitemais.click</span>
             </div>
             <div className="flex items-center gap-3">
               <span>💬</span>

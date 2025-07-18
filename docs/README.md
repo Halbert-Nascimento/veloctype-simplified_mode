@@ -1,6 +1,6 @@
-# 📚 Documentação do VelocType
+# 📚 Documentação do DigiteMais
 
-Esta pasta contém toda a documentação técnica do projeto VelocType para facilitar manutenção e desenvolvimento.
+Esta pasta contém toda a documentação técnica do projeto DigiteMais para facilitar manutenção e desenvolvimento.
 
 ## 📋 Arquivos de Documentação
 

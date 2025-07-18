@@ -2,7 +2,7 @@
 
 ## 🎯 Visão Geral
 
-Esta é a documentação completa do **VelocType v4**, criada em **linguagem cotidiana** para facilitar o entendimento tanto para desenvolvedores experientes quanto para iniciantes. Cada guia explica não apenas o "como", mas também o "porquê" de cada componente.
+Esta é a documentação completa do **DigiteMais v4**, criada em **linguagem cotidiana** para facilitar o entendimento tanto para desenvolvedores experientes quanto para iniciantes. Cada guia explica não apenas o "como", mas também o "porquê" de cada componente.
 
 ---
 
@@ -217,6 +217,6 @@ docs/                       # 📚 Esta documentação
 
 ---
 
-**🎉 Parabéns!** Agora você tem acesso a toda a documentação do VelocType. Esta documentação foi criada pensando em você - seja você um desenvolvedor experiente ou alguém que está começando. Use-a como sua bússola para navegar e modificar o projeto com confiança!
+**🎉 Parabéns!** Agora você tem acesso a toda a documentação do DigiteMais. Esta documentação foi criada pensando em você - seja você um desenvolvedor experiente ou alguém que está começando. Use-a como sua bússola para navegar e modificar o projeto com confiança!
 
-**💝 Lembre-se**: Código bem documentado é código que perdura. Esta documentação garante que o VelocType continue evoluindo de forma organizada e intuitiva.
+**💝 Lembre-se**: Código bem documentado é código que perdura. Esta documentação garante que o DigiteMais continue evoluindo de forma organizada e intuitiva.
