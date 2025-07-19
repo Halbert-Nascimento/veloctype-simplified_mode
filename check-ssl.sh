@@ -14,6 +14,15 @@ NC='\033[0m' # No Color
 DOMAIN="digitemais.click"
 WWW_DOMAIN="www.digitemais.click"
 
+# Detectar versão do Docker Compose
+if command -v "docker-compose" &> /dev/null; then
+    DOCKER_COMPOSE="docker-compose"
+elif command -v "docker" &> /dev/null && docker compose version &> /dev/null; then
+    DOCKER_COMPOSE="docker compose"
+else
+    DOCKER_COMPOSE="docker compose"  # default para V2
+fi
+
 echo -e "${BLUE}========================================${NC}"
 echo -e "${BLUE} 🔍 Verificação SSL - DigiteMais${NC}"
 echo -e "${BLUE}========================================${NC}"
@@ -53,7 +62,7 @@ echo
 
 # 3. Status dos containers
 echo -e "${YELLOW}3. Status dos containers:${NC}"
-docker-compose -f docker-compose.nginx.yml ps
+$DOCKER_COMPOSE -f docker-compose.nginx.yml ps
 echo
 
 # 4. Teste de conectividade HTTPS local
