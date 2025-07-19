@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { ClockIcon, ChartBarIcon, TrophyIcon, InformationCircleIcon, RocketLaunchIcon } from '@heroicons/react/24/outline'
+import AdSense from './components/AdSense'
 
 export default function Home() {
   return (
@@ -83,6 +84,18 @@ export default function Home() {
               <div className="text-xs text-cyan-700 dark:text-cyan-100 mt-4">Seu progresso</div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* AdSense Banner */}
+      <section className="w-full py-8 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <AdSense
+            adSlot="1234567890"
+            adFormat="rectangle"
+            style={{ display: 'block', textAlign: 'center', minHeight: '250px' }}
+            className="mx-auto"
+          />
         </div>
       </section>
 
