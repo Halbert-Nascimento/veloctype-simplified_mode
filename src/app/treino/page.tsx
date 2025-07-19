@@ -2,8 +2,9 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
-import { CheckCircleIcon, XCircleIcon, SpeakerWaveIcon, AdjustmentsHorizontalIcon, LockClosedIcon, TrophyIcon, ChatBubbleLeftRightIcon, ArrowPathIcon } from '@heroicons/react/24/outline'
+import { CheckCircleIcon, XCircleIcon, AdjustmentsHorizontalIcon, LockClosedIcon, ChatBubbleLeftRightIcon, ArrowPathIcon } from '@heroicons/react/24/outline'
 import { useTypingTexts, TypingText } from '../../hooks/useTypingTexts'
+import AdSense from '../components/AdSense'
 
 interface TestResult {
   wpm: number
@@ -15,16 +16,16 @@ interface TestResult {
 }
 
 export default function Treino() {
-  const { categories, getTextsByCategory, getRandomText, getCategoryById, getAvailableCategories } = useTypingTexts()
+  const { getRandomText, getCategoryById, getAvailableCategories } = useTypingTexts()
   
   const [currentText, setCurrentText] = useState<TypingText | null>(null)
   const [userInput, setUserInput] = useState('')
   const [currentIndex, setCurrentIndex] = useState(0)
   const [startTime, setStartTime] = useState<number | null>(null)
   const [elapsedTime, setElapsedTime] = useState(0)
-  const [showErrors, setShowErrors] = useState(true)
+  const [showErrors] = useState(true)
   const [colorFeedback, setColorFeedback] = useState(true)
-  const [soundFeedback, setSoundFeedback] = useState(false)
+  const [soundFeedback] = useState(false)
   const [fontSize, setFontSize] = useState(1)
   const [results, setResults] = useState<TestResult[]>([])
   const [isTestComplete, setIsTestComplete] = useState(false)
@@ -314,6 +315,17 @@ export default function Treino() {
               ))}
             </div>
           </div>
+
+          {/* AdSense - Anúncio Lateral */}
+          <div className="bg-white border border-[#cbd5e1] rounded-2xl shadow-lg p-6 dark:bg-[#162032] dark:border-[#1e293b]">
+            <AdSense
+              adSlot="9876543210"
+              adFormat="rectangle"
+              style={{ display: 'block', textAlign: 'center', minHeight: '250px' }}
+            />
+          </div>
+
+
           {/* Configurações */}
           <div className="bg-white border border-[#cbd5e1] rounded-2xl shadow-lg p-6 dark:bg-[#162032] dark:border-[#1e293b]">
             <h3 className="text-lg font-bold text-cyan-700 dark:text-cyan-300 mb-4 flex items-center gap-2"><AdjustmentsHorizontalIcon className="w-5 h-5" />Configurações</h3>
