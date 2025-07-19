@@ -69,18 +69,30 @@ fi
 
 print_status "Domínio $DOMAIN resolve para: $DOMAIN_IP"
 
+# Detectar versão do Docker Compose
+if command -v "docker-compose" &> /dev/null; then
+    DOCKER_COMPOSE="docker-compose"
+    print_status "Usando Docker Compose V1 (docker-compose)"
+elif command -v "docker" &> /dev/null && docker compose version &> /dev/null; then
+    DOCKER_COMPOSE="docker compose"
+    print_status "Usando Docker Compose V2 (docker compose)"
+else
+    print_error "Docker Compose não encontrado. Instale docker-compose ou use Docker com plugin compose."
+    exit 1
+fi
+
 # Verificar se aplicação está rodando
 print_status "Verificando se aplicação está rodando..."
-if ! docker-compose -f docker-compose.nginx.yml ps | grep -q "digitemais-app.*Up"; then
+if ! $DOCKER_COMPOSE -f docker-compose.nginx.yml ps | grep -q "digitemais-app.*Up"; then
     print_warning "Aplicação não está rodando. Iniciando..."
-    docker-compose -f docker-compose.nginx.yml up -d
+    $DOCKER_COMPOSE -f docker-compose.nginx.yml up -d
     sleep 10
 fi
 
 # Verificar se porta 80 responde
 if ! curl -s http://localhost/api/health > /dev/null; then
     print_error "Aplicação não responde na porta 80. Verifique os containers."
-    docker-compose -f docker-compose.nginx.yml ps
+    $DOCKER_COMPOSE -f docker-compose.nginx.yml ps
     exit 1
 fi
 
@@ -88,7 +100,7 @@ print_status "Aplicação está funcionando!"
 
 # Parar nginx para obter certificado
 print_status "Parando Nginx temporariamente para obter certificado..."
-docker-compose -f docker-compose.nginx.yml stop nginx
+$DOCKER_COMPOSE -f docker-compose.nginx.yml stop nginx
 
 # Obter certificado SSL
 print_status "Obtendo certificado SSL do Let's Encrypt..."
@@ -160,14 +172,14 @@ fi
 
 # Reiniciar aplicação com SSL
 print_status "Reiniciando aplicação com SSL..."
-docker-compose -f docker-compose.nginx.yml up -d
+$DOCKER_COMPOSE -f docker-compose.nginx.yml up -d
 
 # Aguardar containers iniciarem
 sleep 10
 
 # Verificar se containers estão rodando
 print_status "Verificando status dos containers..."
-docker-compose -f docker-compose.nginx.yml ps
+$DOCKER_COMPOSE -f docker-compose.nginx.yml ps
 
 # Testar HTTPS
 print_status "Testando configuração HTTPS..."
@@ -228,7 +240,7 @@ echo "$(date): Iniciando renovação SSL DigiteMais..." >> $LOG_FILE
 cd $PROJECT_DIR
 
 # Parar Nginx
-docker-compose -f docker-compose.nginx.yml stop nginx
+docker compose -f docker-compose.nginx.yml stop nginx
 
 # Renovar certificados
 if certbot renew --quiet; then
@@ -249,7 +261,7 @@ else
 fi
 
 # Reiniciar Nginx
-docker-compose -f docker-compose.nginx.yml start nginx
+docker compose -f docker-compose.nginx.yml start nginx
 
 echo "$(date): Renovação SSL concluída" >> $LOG_FILE
 EOF
