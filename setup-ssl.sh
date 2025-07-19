@@ -16,7 +16,7 @@ NC='\033[0m' # No Color
 # Configurações
 DOMAIN="digitemais.click"
 WWW_DOMAIN="www.digitemais.click"
-EMAIL="halbertfsa@gmail.com"  # ALTERE ESTE EMAIL
+EMAIL="seu-email@exemplo.com"  # ALTERE ESTE EMAIL
 PROJECT_DIR="/opt/apps/digitemais"
 SSL_DIR="$PROJECT_DIR/ssl"
 
